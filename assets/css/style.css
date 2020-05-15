@@ -1,54 +1,225 @@
-.left_menu
-{float:left;
-width:20%;
-margin-left:1%
+body, h1, h2, h3, li, a, button
+{
+  text-decoration: none;
+  list-style: none;
+  border: none;
 }
-.right {float:right; width:79%}
-.menu1 {
-margin: 0;
-padding: 0;
-left: 0px;
-right: 0px;
-top: 0px;
-bottom: 0px;
-background: #F3F4F9;}
-.mainmenu1
+*
 {
-font-family: Poppins;
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 24px;
-text-transform: uppercase;
-text-decoration: none;
-color: #333333;}
-.mainmenu2
+  margin: 0;
+  padding: 0;
+}
+body
 {
-font-family: Open Sans;
-font-style: normal;
-font-weight: 600;
-font-size: 16px;
-line-height: 22px;
-text-decoration: none;
-margin-top: 2;
-color: #333333;}
-h1
-{font-family: Open Sans;
-font-style: normal;
-font-weight: 600;
-font-size: 28px;
-line-height: 38px;
-color: #000000;}
-form
-{border-radius: 0}
-input
+  width: 1440px;
+  height: 1045px;
+}
+/* -----Левое меню----- */
+.sidebar
 {
-left: 0%;
-right: 0%;
-top: 0%;
-bottom: 0%;
+  position: absolute;
+  width: 240px;
+  height: 1045px;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  background: #F3F4F9;
+}
+.logo
+{
+  position: absolute;
+  display: flex;
+  width: 121px;
+  height: 50px;
+  left: 41px;
+  top: 41px;
+}
+.logo_icon
+{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 0px;
+  top: calc(50% - 50px/2);
+}
+.logo_title
+{
+  position: absolute;
+  width: 61px;
+  height: 24px;
+  left: 60px;
+  top: calc(50% - 24px/2);
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #333333;
+}
+.category
+{
+  width: 240px;
+  position: absolute;
+  display:flex;
+  height: 64px;
+  left: 0px;
+  right: 0px;
+  top: 132px;
+  /* background-color: green; */
+}
+.icons
+{
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 40px;
+  top: 18px;
+  color: #333;
+}
+.c1
+{
+  position: absolute;
+  height: 64px;
+  left: 0px;
+  right: 0px;
+  top: 132px;
+}
+.c2
+{
+  position: absolute;
+  height: 64px;
+  left: 0px;
+  right: 0px;
+  top: 196px;
+}
+.c3
+{
+  position: absolute;
+  height: 64px;
+  left: 0px;
+  right: 0px;
+  top: 260px;
+}
+.c4
+{
+  position: absolute;
+  height: 64px;
+  left: 0px;
+  right: 0px;
+  top: 324px;
+}
+.c5
+{
+  position: absolute;
+  height: 64px;
+  left: 0px;
+  right: 0px;
+  top: 388px;
+}
 
-border: 1px solid rgba(51, 51, 51, 0.2);
-box-sizing: border-box;
-border-radius: 50px;
-  }
+.category_name
+{
+  position: absolute;
+  width: 122px;
+  height: 22px;
+  left: 76px;
+  top: 19px;
+  text-decoration: none;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: #333333;
+}
+/* --------------------- */
+.main_page
+{
+  display: flex;
+  width: 1440px;
+  height: 1045px;
+  /* background-color: lightblue; */
+}
+/* -----Меню поиска----- */
+.header
+{
+  position: absolute;
+  margin-left: 240px;
+  display: flex;
+  width: 1200px;
+  height: 201px;
+
+}
+.title
+{
+  position: absolute;
+  padding: 40px 740px 123px 60px;
+  width: 400px;
+  height: 38px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 38px;
+  color: rgba(0, 0, 0, .85);
+}
+.search_box
+{
+  position: absolute;
+  display: flex;
+  width: 1080px;
+  height: 52px;
+  margin: 109px 60px 40px;
+  padding:  12px 16px 12px 44px;
+  border: 1px solid rgba(51, 51, 51, 0.2);
+  box-sizing: border-box;
+  border-radius: 50px;
+}
+.search_icon
+{
+  position: absolute;
+  left: 1.5%;
+  top: 30.7%;
+}
+.search
+{
+  position: absolute;
+  width: 1020px;
+  height: 28px;
+  left: 44px;
+  right: 16px;
+  top: calc(50% - 14px);
+  border: none;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+  color: rgba(0, 0, 0, .45);
+  outline: none;
+  /* margin: 12px 16px 12px 44px; */
+}
+.line
+{
+  position: absolute;
+  height: 1px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: #E5E5E5;
+}
+/* --------------------- */
+/* Раздел купонов */
+.search_results
+{
+  position: absolute;
+  margin: 201px 0 0 240px;
+  display: flex;
+  width: 1200px;
+  height: 844px;
+  background: #FAFAFA;
+}
