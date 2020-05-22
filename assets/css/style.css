@@ -38,14 +38,14 @@ body
 {
 
 }
-.logo_icon
+.logo__icon
 {
   position: relative;
   display: flex;
   width: auto;
   height: auto;;
 }
-.logo_title
+.logo__title
 {
   position: relative;
   display: flex;
@@ -74,7 +74,8 @@ body
   content:"";
   display:block;
   width: 3px;
-  height: 64px;
+  height: 24px;
+  margin-top: 20px;
   background-color: #34ABE0;
   position: absolute;
   top: 0;
@@ -90,7 +91,7 @@ body
 {
   opacity: 1;
 }
-.category:hover  .category_name
+.category:hover  .category__name
 {
   color: #34ABE0;
 }
@@ -100,7 +101,6 @@ body
 }
 .category:active:before
 {
-  top: 20px;
   height: 24px;
   opacity: 1;
 }
@@ -119,7 +119,7 @@ body
 {
   transition: stroke .2s linear;
 }
-.category_name
+.category__name
 {
   position: relative;
   width: 122px;
@@ -151,8 +151,8 @@ body
 .title
 {
   position: relative;
-  display: inline-flex;
-  width: 400px;
+  display: inline-block;
+  width: calc(1080/1100 * 100%);
   height: 38px;
   margin: 10px;
   font-family: Open Sans;
@@ -162,23 +162,22 @@ body
   line-height: 38px;
   color: rgba(0, 0, 0, .85);
 }
-.search_box
+.search__box
 {
   display: inline-flex;
   position: relative;
   width: calc(1080/1100 * 100%);
   height: 52px;
   margin: 10px;
-  padding:  12px 16px 12px 44px;
+  padding:  12px 16px;
   border: 1px solid rgba(51, 51, 51, 0.2);
   box-sizing: border-box;
   border-radius: 50px;
 }
-.search_icon
+.search__icon
 {
-  position: absolute;
-  left: 1.5%;
-  top: 30.7%;
+  position: relative;
+  margin: auto;
 }
 .search
 {
@@ -187,6 +186,7 @@ body
   height: 28px;
   top: calc(50% - 14px);
   border: none;
+  margin-left: 8px;
   font-family: Open Sans;
   font-style: normal;
   font-weight: normal;
@@ -217,15 +217,16 @@ body
   position: relative;
   display: inline-flex;
   margin: 10px;
-  width: 28.9%;
+  width: 31%;
   max-width: 347px;
+  min-width: 296px;
   height: 161px;
 }
 .coupon
 {
-  display: flex;
+  position: absolute;
   width: 100%;
-  height: 161px;
+  height: 100%;
   background: #fff;
   background-size: cover;
   border-radius: 10px;
@@ -244,46 +245,35 @@ body
 .coupon:hover
 {
   border: 1px solid #DF212D;
-  box-sizing: border-box;
 }
 .image
 {
   position: absolute;
+  right: -1px;
+  top: 0px;
   width: 130px;
   height: 161px;
-  right: 0px;
-  top: 0px;
-  bottom: 0px;
   display: block;
   object-fit: cover;
 }
 .top
 {
-  position: absolute;
   height: 36px;
-  width: 306px;
-  left: 20px;
-  right: 20px;
-  top: 16px;
-  display: flex;
+  width: 61%;
+  margin: 16px 20px 22px;
+  display: block;
 }
 .bottom
 {
-  position: absolute;
-  display: flex;
+  position: relative;
+  display: inline-block;
+  margin: 22px 20px 16px;
   width: 195px;
   height: 50px;
-  left: 20px;
-  right: 131px;
-  bottom: 16px;
 }
 .topheader
 {
-  position: absolute;
   height: 16px;
-  left: 0px;
-  right: 0px;
-  top: 0px;
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
@@ -295,11 +285,8 @@ body
 }
 .topdesc
 {
-  position: absolute;
   height: 16px;
-  left: 0px;
-  right: 0px;
-  top: 20px;
+  margin-top: 4px;
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -310,43 +297,100 @@ body
 }
 .botnum
 {
-  position: absolute;
   height: 28px;
-  left: 0px;
-  right: 0px;
-  top: 0px;
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
   font-size: 36px;
   line-height: 28px;
-  display: flex;
   align-items: center;
   color: #DF212D;
 }
 .botlabel
 {
-  position: absolute;
   height: 16px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
+  margin-top: 6px;
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 16px;
-  display: flex;
   align-items: center;
   letter-spacing: 0.4em;
   text-transform: uppercase;
   color: #000000;
   opacity: 0.5;
 }
-@media screen and (max-width: 768px)
+@media screen and (max-width: 945px)
 {
   .sidebar
-  {
-    display:none;
-  }
+  {display:none;}
+  .page
+  {width: 100vw;}
+  .main_page
+  {width: 100vw;}
+  .cover
+  {width: 46%;
+  height: 144px;}
+  .top , .bottom
+  {margin: 15px 18px;}
+  .topdesc
+  {margin-top: 4px;}
+  .botlabel
+  {margin-top: 3px;}
+  .header
+  {height: 123px;
+  padding: 31px 27px 27px;}
+  .title
+  {width: 100%);
+  margin: 0;
+  text-align: right;}
+  .search__box
+  {margin: 33px 0 0 0;
+  width: 100%;}
+  .image
+  {height: 144px;
+  width: 104px;}
+}
+@media screen and (max-width: 752px)
+{
+  .main_page
+  {width: 100vw;}
+  .cover
+  {width: 100%;
+  min-width: 268px;
+  height: 130px;
+  margin: 20px auto;
+  display: flex;}
+  .search
+  {font-size: 14px;}
+  .search__box
+  {margin: 20px 0 0 0;
+  width: 100%;}
+  .title
+  {font-size: 24px;
+    height: 32px;
+    width: 100%;
+    margin: 0;
+    text-align: right;}
+  .header
+  {height: 105px;
+  padding: 37px 20px 27px;}
+  .image
+  {height: 130px;
+  width: 89px;}
+  .top
+  {height: 32px;
+  margin: 16px 20px 13px;}
+  .bottom
+  {height: 40px;
+  margin: 13px 20px 16px;}
+  .topheader , .topdesc , .botlabel
+  {font-size: 12px;}
+  .botlabel
+  {margin-top: 2px;}
+  .botnum
+  {font-size: 28px;}
+  .search_results
+  {padding: 7px 20px 0;}
 }
